@@ -1,0 +1,224 @@
+
+/* variables a ser usadas  */
+:root {
+    --primary:#07291ce0;
+    --secundary:#9dff003a;
+    --background:#6d7e4ee0;
+    --black-text:rgb(61, 61, 61);
+    --white-text:#ffffff;
+    --blue-gradient:linear-gradient(90deg,#42b983,#35495e);
+    --button-hover:rgba(25, 34, 27, 0.342);
+    --text-shadow:.2rem .2rem .2rem #0d0d0e;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(168, 145, 145, 0.459);
+    
+}
+
+.main_nav {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color:  var(--primary);
+    height: 10vh;
+    width: 100%;
+
+    
+
+}
+
+.nav_responsive-button {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--white-text);
+    cursor: pointer;
+    border: solid 1.5px var(--white-text);
+    padding: .4rem;
+    border-radius: .1rem;
+    margin: auto;
+    
+    
+}
+
+    
+
+
+.logo {
+    color: var(--white-text);
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    margin: auto;
+        
+}
+
+.nav_container {
+    position: fixed;
+    display: none;
+    flex-flow: column;
+    align-content: stretch;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--background);
+    top: 10vh;
+    text-align: center;
+    transition: 0.5s all ease;
+   /*  left: -100%; */
+}
+
+.nav_item {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+    text-align: left;
+}
+
+
+.nav_link {
+    color: var(--white-text);
+    font-size: 1.2rem;
+    padding: .8rem 1rem;
+    text-transform: uppercase;
+}
+
+.nav_link:hover {
+    background-color: var(--button-hover);
+    transition: all .3s;
+    border-bottom: solid .2rem var(--secundary);
+}
+
+.logo_responsive {
+    display: none;
+}
+
+/* #ckbox:checked  ~ .nav_container {
+    left:0;
+} */
+
+
+
+
+
+
+
+
+/* EFECTO HOVER AVANZADO */
+
+.container__all {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.8rem;
+}
+
+.container__box {
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.container__box a {
+    text-decoration: none;
+    color: #000;
+}
+
+.box {
+    width: 18rem;
+    height: 16rem;
+    padding: 2rem;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 300ms;
+    margin: 1.5rem;
+}
+        .box:hover {
+            transform: translate(.3rem, -.9rem);
+            box-shadow: -1rem 1rem 2rem -1rem #0d0d0ed5;
+        }
+
+.box .icon__menu,
+.box h4,
+.box p {
+    position: relative;
+    z-index: 1;
+
+}
+
+.box .icon__menu {
+    font-size: 3rem;
+    color: #2e36a1ab;
+    transform: translateY(3rem);
+
+}
+        .box:hover .icon__menu {
+            color: rgba(255, 255, 255, 0.986);
+            font-size: 2.3rem;
+            transform: translateY(0);
+        }
+.box .icon__menu,
+.box h4,
+.box p {
+    margin-top: 1rem;
+    transition: all 400ms;
+}
+
+.box h4 {
+    font-size: 2rem;
+    transform: translateY(3rem);
+}
+        .box:hover h4 {
+            transform: translateY(0);
+            color: #fff;
+        }
+.box p {
+    font-size: 1rem;
+    transform: translateY(10rem);
+    opacity: 0;
+}
+        .box:hover p {
+            transform: translateY(0);
+            opacity: 1;
+            color: #fff;
+        }
+
+    .box .background__hover {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        top: 15rem;
+        left: -8rem;
+        border-radius: 100%;
+        transition: all 300ms;
+        background: linear-gradient(to bottom, rgb(91, 146, 54), rgb(31, 18, 87));
+
+    }
+        .box:hover .background__hover {
+            width: 24rem;
+            height: 24rem;
+            top: -4rem;
+            left: -3rem;
+            
+        }
+
+    /* Cambiar color de las diferentes cajar */
+
+    .box1 .icon__menu {
+        color: rgba(238, 20, 20, 0.849);
+    }
